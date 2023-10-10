@@ -35,6 +35,7 @@ int	ft_sameletters(char *to_find, char *answer)
 			{
 				tab[j] = 1;
 				rep++;
+				break;
 			}
 			j++;
 		}
