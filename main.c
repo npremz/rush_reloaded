@@ -6,7 +6,7 @@
 /*   By: npremont <npremont@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 14:16:46 by npremont          #+#    #+#             */
-/*   Updated: 2023/10/11 10:38:04 by npremont         ###   ########.fr       */
+/*   Updated: 2023/10/11 12:32:33 by npremont         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,8 @@ void	ft_gameinput(int word_size, char **answer, char *word)
 	int	i;
 
 	printf("Enter a combination of %d letters: ", word_size);
-	scanf("%s", *answer);
+	scanf(" %99[^\n]", *answer);
+	fflush(stdin);
 	if (strlen(*answer) != strlen(word))
 		printf("Your answer doesn't match the word length...\n");
 	else
@@ -66,12 +67,12 @@ int	main(int ac, char *av[])
 	j = 1;
 	while (++answer_count < 21 && strcmp(answer, parsing[0]) != 0)
 	{
-		answer = malloc(300);
+		answer = malloc(100);
 		if (answer == NULL)
 			return (1);
 		ft_gameinput(strlen(parsing[0]), &answer, parsing[0]);
 		if (answer_count % 5 == 0 && strcmp(answer, parsing[0]) != 0)
-			printf("%s\n", parsing[j++]);
+			printf("Here is a int because you suck : %s\n", parsing[j++]);
 	}
 	if (strcmp(answer, parsing[0]) == 0)
 		printf("You won! Well played.\n");

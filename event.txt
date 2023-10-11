@@ -1,4 +1,4 @@
-pasteque
-fruit
-vert
-rouge
+leopard
+string
+félin
+taches
