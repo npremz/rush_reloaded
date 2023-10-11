@@ -6,7 +6,7 @@
 /*   By: npremont <npremont@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 17:44:40 by npremont          #+#    #+#             */
-/*   Updated: 2023/10/10 19:03:51 by npremont         ###   ########.fr       */
+/*   Updated: 2023/10/11 10:35:01 by npremont         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,22 +24,20 @@ int	ft_sameletters(char *to_find, char *answer)
 	tab = (int *)malloc(sizeof(int) * strlen(to_find));
 	if (tab == 0)
 		return (-1);
-	i = 0;
+	i = -1;
 	rep = 0;
-	while (answer[i] != '\0')
+	while (answer[++i] != '\0')
 	{
-		j = 0;
-		while (to_find[j] != '\0')
+		j = -1;
+		while (to_find[++j] != '\0')
 		{
 			if (answer[i] == to_find[j] && tab[j] != 1)
 			{
 				tab[j] = 1;
 				rep++;
-				break;
+				break ;
 			}
-			j++;
 		}
-		i++;
 	}
 	free(tab);
 	return (rep);
@@ -72,9 +70,3 @@ int	*ft_checkword(char *to_find, char *answer)
 	tab[1] = ft_sameletters(to_find, answer) - tab[0];
 	return (tab);
 }
-
-// int main(void) {
-//   int *res = ft_checkword("pomme", "emmop");
-//   printf("place :%d %d\n", res[0], res[1]);
-//   return 0;
-// }

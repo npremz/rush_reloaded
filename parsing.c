@@ -6,7 +6,7 @@
 /*   By: npremont <npremont@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 14:16:58 by bschor            #+#    #+#             */
-/*   Updated: 2023/10/10 18:05:12 by npremont         ###   ########.fr       */
+/*   Updated: 2023/10/11 10:35:00 by npremont         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,19 +93,3 @@ char	**ft_parsing(char *file)
 	ft_dup(tab, file);
 	return (tab);
 }
-
-// int	main(void)
-// {
-// 	char	**tab;
-// 	int		len;
-// 	char	*file = "test.txt";
-// 	int		i = 0;
-
-// 	tab = ft_parsing(&len, file);
-// 	while (i < 4)
-// 	{
-// 		printf("%s\n", tab[i]);
-// 		i++;
-// 	}
-// 	return 0;
-// }

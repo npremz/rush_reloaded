@@ -6,7 +6,7 @@
 /*   By: npremont <npremont@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 14:16:46 by npremont          #+#    #+#             */
-/*   Updated: 2023/10/10 19:08:01 by npremont         ###   ########.fr       */
+/*   Updated: 2023/10/11 10:38:04 by npremont         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	ft_gameinput(int word_size, char **answer, char *word)
 	printf("Enter a combination of %d letters: ", word_size);
 	scanf("%s", *answer);
 	if (strlen(*answer) != strlen(word))
-		printf("Your answer doesn't match the word length...\n");\
+		printf("Your answer doesn't match the word length...\n");
 	else
 	{
 		i = 0;
